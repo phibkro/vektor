@@ -2,7 +2,24 @@
 import "@/globals.css";
 import { Image } from "astro:assets";
 import { ModeToggle } from "@/components/ModeToggle";
+import VektorLogo from "@images/vektor-logo.svg";
 import { Facebook, FolderOpen, Mail, MapPin } from "lucide-react";
+
+interface Route {
+	path: string;
+	name: string;
+}
+const routes: Route[] = [
+	{ path: "", name: "Hjem" },
+	{ path: "/assistenter", name: "Assistenter" },
+	{ path: "/staging", name: "Staging" },
+	{ path: "/foreldre", name: "Foreldre" },
+	{ path: "/skoler", name: "Skoler" },
+	{ path: "/kontakt", name: "Kontakt" },
+	{ path: "/om-oss", name: "Om oss" },
+	{ path: "/team", name: "Team" },
+	{ path: "/mineUtlegg", name: "Utlegg" },
+];
 
 const sponsors = [
 	{ name: "Tekna", url: new URL("https://www.tekna.no/") },
@@ -48,6 +65,25 @@ const sponsors = [
 
 <body class="flex flex-col pt-4 min-h-screen">
   <header class="flex justify-center items-center gap-8">
+    <nav class="flex justify-center items-center gap-8">
+      <a href="/">
+        <Image
+          class="h-16 lg:h-20"
+          src={VektorLogo}
+          width={200}
+          height={200}
+          alt="Vektorprogrammet logo"
+        />
+      </a>
+      {routes.map((route) => (
+        <a
+          href={route.path}
+          class="hover:underline"
+        >
+          {route.name}
+        </a>
+      ))}
+    </nav>
     <ModeToggle client:load />
   </header>
 
