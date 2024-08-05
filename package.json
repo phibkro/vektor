@@ -9,7 +9,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint": "biome lint --write src/",
-    "format": "biome format --write src/"
+    "format": "biome format --write src/",
+    "db:push": "astro db push --remote",
+    "db:seed": "astro db execute db/seed.ts --remote"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.1",
