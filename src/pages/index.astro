@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 
 import Meta from "src/layouts/Meta.astro";
+import Page from "src/layouts/Page.astro";
 
 import vektorForsidebilde from "@images/vektor-forsidebilde.png";
 import Abelprisen from "@images/sponsor/Abelprisen.png";
@@ -49,6 +50,7 @@ const cards: Card[] = [
 ---
 
 <Meta title="Vektor">
+	<Page>
 		<main>
 			{/* Use component when the rendered component needs no props */}
 			{/* Getting the routes from the defined route file in pages */}
@@ -222,4 +224,5 @@ const cards: Card[] = [
 				</div>
 			</div>
 		</main>
+	</Page>
 </Meta>

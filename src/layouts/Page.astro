@@ -1,0 +1,91 @@
+---
+import { Image } from "astro:assets";
+import { Facebook, FolderOpen, Mail, MapPin } from "lucide-react";
+
+const sponsors = [
+	{ name: "Tekna", url: new URL("https://www.tekna.no/") },
+	{
+		name: "Nasjonalt senter for realfagsrekruttering",
+		url: new URL("https://www.realfagsrekruttering.no/"),
+	},
+	{ name: "NTNU IV", url: new URL("https://www.ntnu.no/iv") },
+	{ name: "NTNU IE", url: new URL("https://www.ntnu.no/ie") },
+	{ name: "NTNU IMF", url: new URL("https://www.ntnu.no/imf") },
+	{ name: "Samarbeidsforum", url: new URL("https://www.ntnu.no/nv/sf") },
+	{ name: "Abelprisen", url: new URL("https://www.abelprisen.no/") },
+	{ name: "VisionTech", url: new URL("https://www.visiontech.no/") },
+	{
+		name: "Kulturstyret i Bergen",
+		url: new URL("https://www.vtvest.no/kulturstyret/"),
+	},
+	{
+		name: "MN-faktultetet ved UiB",
+		url: new URL("https://www.uib.no/matnat"),
+	},
+];
+---
+
+<body class="flex flex-col pt-4 min-h-screen">
+
+  <slot />
+
+  <footer class="flex flex-row justify-center p-10 gap-4 w-screen mx-auto bg-blue-900 text-white">
+    <img
+        src={VektorLogoWhite.src}
+        alt="vektorprogrammet logo hvit"
+        class="h-24 md:h-40"
+    />
+    <!-- Footer links -->
+    <ul class="flex flex-col gap-4">
+      <li class="flex flex-row gap-2">
+        <Facebook />
+        <a
+          class="hover:underline"
+          href="https://www.facebook.com/vektorprogrammet/"
+        >
+          Trondheim
+        </a>
+        <a
+          class="hover:underline"
+          href="https://www.facebook.com/vektorprogrammetNMBU/"
+        >
+          Ås
+        </a>
+        <a
+          class="hover:underline"
+          href="https://www.facebook.com/VektorprogrammetBergen/"
+        >
+          Bergen
+        </a>
+      </li>
+      <li class="flex flex-row gap-2">
+        <Mail />
+        <a
+          class="hover:underline"
+          href="mailto:hovedstyret@vektorprogrammet.no"
+        >
+          hovedstyret@vektorprogrammet.no
+        </a>
+      </li>
+      <li class="flex flex-row gap-2">
+        <MapPin />
+        <span>Høgskoleringen 5, 7491 Trondheim</span>
+      </li>
+      <li class="flex flex-row gap-2">
+        <FolderOpen />
+        <span>OrgNr: 998744814</span>
+      </li>
+    </ul>
+    <!-- Sponsors -->
+    <ul>
+      <li><b>Sponsorer og sammarbeidspartnere</b></li>
+      {sponsors.map((sponsor) => (
+        <li>
+          <a class="text-sm hover:underline" href={sponsor.url.href}>
+            {sponsor.name}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </footer>
+</body>
