@@ -8,5 +8,7 @@ import db from "@astrojs/db";
 export default defineConfig({
   integrations: [react(), tailwind({
     applyBaseStyles: false
-  }), db()]
+  }), db()],
+  site: "https://phibkro.github.io",
+  base: "vektor"
 });
