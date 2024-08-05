@@ -2,7 +2,6 @@ import { column, defineDb, defineTable } from 'astro:db';
 
 const Sponsors = defineTable({
   columns: {
-    id: column.number({ primaryKey: true }),
     name: column.text(),
     url: column.text(),
   },
