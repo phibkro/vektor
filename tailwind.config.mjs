@@ -46,6 +46,17 @@ export default {
 					DEFAULT: "hsl(var(--card))",
 					foreground: "hsl(var(--card-foreground))",
 				},
+				vektor: {
+					blue: {
+						DEFAULT: "var(--vektor-blue)",
+						dark: "#223c70",
+						hover: "#46b6dd",
+					},
+					bg: "#fafdff",
+					grey: "#EFEFEF",
+					kontrollblue: "#292E4C",
+					footer: "#022346"
+				}
 			},
 			borderRadius: {
 				lg: "var(--radius)",
