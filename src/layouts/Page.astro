@@ -3,6 +3,7 @@ import "@/globals.css";
 import { Image } from "astro:assets";
 import { ModeToggle } from "@/components/ModeToggle";
 import VektorLogo from "@images/vektor-logo.svg";
+import VektorLogoWhite from "@images/vektor-logo-white.svg";
 import { Facebook, FolderOpen, Mail, MapPin } from "lucide-react";
 
 interface Route {
@@ -90,10 +91,12 @@ const sponsors = [
   <slot />
 
   <footer class="flex flex-row justify-center p-10 gap-4 w-screen mx-auto bg-blue-900 text-white">
-    <img
-        src={VektorLogoWhite.src}
-        alt="vektorprogrammet logo hvit"
+    <Image
         class="h-24 md:h-40"
+        src={VektorLogoWhite}
+        width={400}
+        height={400}
+        alt="vektorprogrammet logo hvit"
     />
     <!-- Footer links -->
     <ul class="flex flex-col gap-4">
