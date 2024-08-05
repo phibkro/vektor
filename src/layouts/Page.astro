@@ -12,7 +12,7 @@ interface Route {
 	name: string;
 }
 const routes: Route[] = [
-	{ path: "", name: "Hjem" },
+	{ path: "/", name: "Hjem" },
 	{ path: "/assistenter", name: "Assistenter" },
 	{ path: "/staging", name: "Staging" },
 	{ path: "/foreldre", name: "Foreldre" },
@@ -48,7 +48,7 @@ const sponsors = await db.select().from(Sponsors);
 <body class="flex flex-col pt-4 min-h-dvh">
   <header class="sticky top-0 flex-auto flex justify-center items-center gap-8">
     <nav class="flex justify-center items-center gap-8">
-      <a href="/">
+      <a href={import.meta.env.BASE_URL}>
         <Image
           class="h-16 lg:h-20"
           src={VektorLogo}
@@ -59,7 +59,7 @@ const sponsors = await db.select().from(Sponsors);
       </a>
       {routes.map((route) => (
         <a
-          href={route.path}
+          href={import.meta.env.BASE_URL + route.path}
           class="hover:underline"
         >
           {route.name}
@@ -77,7 +77,7 @@ const sponsors = await db.select().from(Sponsors);
         src={VektorLogoWhite}
         width={400}
         height={400}
-        alt="vektorprogrammet logo hvit"
+        alt="Vektorprogrammet logo hvit"
     />
     <!-- Footer links -->
     <ul class="flex flex-col gap-4">
