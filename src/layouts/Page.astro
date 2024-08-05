@@ -45,8 +45,8 @@ const sponsors = await db.select().from(Sponsors);
 	}
 </script>
 
-<body class="flex flex-col pt-4 min-h-screen">
-  <header class="flex justify-center items-center gap-8">
+<body class="flex flex-col pt-4 min-h-dvh">
+  <header class="flex-auto flex justify-center items-center gap-8">
     <nav class="flex justify-center items-center gap-8">
       <a href="/">
         <Image
@@ -69,9 +69,9 @@ const sponsors = await db.select().from(Sponsors);
     <ModeToggle client:load />
   </header>
 
-  <slot />
+  <slot class="flex-1"/>
 
-  <footer class="flex flex-row justify-center p-10 gap-4 w-screen mx-auto bg-blue-900 text-white">
+  <footer class="flex-auto flex flex-row justify-center p-10 gap-4 w-screen mx-auto bg-vektor-blue-dark text-white">
     <Image
         class="h-24 md:h-40"
         src={VektorLogoWhite}
