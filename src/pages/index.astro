@@ -1,5 +1,8 @@
 ---
 import { Image } from "astro:assets";
+
+import Meta from "src/layouts/Meta.astro";
+
 import vektorForsidebilde from "@images/vektor-forsidebilde.png";
 import Abelprisen from "@images/sponsor/Abelprisen.png";
 import KSBergen from "@images/sponsor/KSBergen.png";
@@ -45,16 +48,8 @@ const cards: Card[] = [
 ];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<main class="flex-grow">
+<Meta title="Vektor">
+		<main>
 			{/* Use component when the rendered component needs no props */}
 			{/* Getting the routes from the defined route file in pages */}
 			<div class="bg-vektor-index-blue md:flex">
@@ -227,5 +222,4 @@ const cards: Card[] = [
 				</div>
 			</div>
 		</main>
-	</body>
-</html>
+</Meta>
