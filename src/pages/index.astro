@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import vektorForsidebilde from "@images/vektor-forsidebilde.png";
 import Abelprisen from "@images/sponsor/Abelprisen.png";
 import KSBergen from "@images/sponsor/KSBergen.png";
@@ -62,9 +63,11 @@ const cards: Card[] = [
 					<h1 class="pt-20 md:p-0 font-bold text-4xl visible md:hidden mx-auto">
 						Vektorprogrammet
 					</h1>
-					<img
+					<Image
 						class="pt-10 md:pt-0 mx-auto my-auto md:ml-auto md:mr-0 h-full"
-						src={vektorForsidebilde.src}
+						src={vektorForsidebilde}
+						width={801}
+						height={765}
 						alt="Vektorprogrammet"
 					/>
 				</div>
@@ -121,16 +124,20 @@ const cards: Card[] = [
 				</div>
 				<div class="flex mx-96 mt-12">
 					<div class="w-1/2 h-28">
-						<img
+						<Image
 							class="h-full m-auto"
-							src={Abelprisen.src}
+							src={Abelprisen}
+							width={546}
+							height={167}
 							alt="Abelprisen"
 						/>
 					</div>
 					<div class="w-1/2 h-28">
-						<img
+						<Image
 							class="h-full m-auto"
-							src={SparebankstiftelsenDNB.src}
+							src={SparebankstiftelsenDNB}
+							width={1820}
+							height={1580}
 							alt="Sparebankstiftelsen DNB"
 						/>
 					</div>
@@ -140,60 +147,80 @@ const cards: Card[] = [
 				</div>
 				<div class="flex mx-96 mt-12">
 					<div class="w-1/2 h-28">
-						<img class="h-full m-auto p-4" src={Tekna.src} alt="Tekna" />
+						<Image 
+							class="h-full m-auto p-4" 
+							src={Tekna} 
+							width={528}
+							height={200}
+							alt="Tekna" 
+						/>
 					</div>
 					<div class="w-1/2 h-28">
-						<img
+						<Image
 							class="m-auto p-4"
-							src={NTNUIV.src}
+							src={NTNUIV}
+							width={1041}
+							height={240}
 							alt="NTNU - Fakultet for ingeniørvitenskap"
 						/>
 					</div>
 				</div>
 				<div class="flex mx-96 mt-12">
 					<div class="w-1/2 h-28">
-						<img
+						<Image
 							class=" m-auto p-4"
-							src={NTNUIE.src}
+							src={NTNUIE}
+							width={879}
+							height={284}
 							alt="NTNU - Fakultet for informasjonsteknologi og elektronikk"
 						/>
 					</div>
 					<div class="w-1/2 h-28">
-						<img
+						<Image
 							class="h-full m-auto p-4"
-							src={Samarbeidsforum.src}
+							src={Samarbeidsforum}
+							width={1000}
+							height={420}
 							alt="Samarbeidsforum"
 						/>
 					</div>
 				</div>
 				<div class="flex mx-96 mt-12">
 					<div class="w-1/2 h-28">
-						<img
+						<Image
 							class="h-full m-auto p-4"
-							src={UiB.src}
+							src={UiB}
+							width={1700}
+							height={383}
 							alt="Universitetet i Bergen - Det matematisk-naturvitenskapelige fakultet"
 						/>
 					</div>
 					<div class="w-1/2 h-28">
-						<img
+						<Image
 							class="h-full m-auto p-4"
-							src={Matematikksenteret.src}
+							src={Matematikksenteret}
+							width={570}
+							height={200}
 							alt="Matematikksenteret"
 						/>
 					</div>
 				</div>
 				<div class="flex mx-96 mt-12">
 					<div class="w-1/2 h-28">
-						<img
+						<Image
 							class="h-full m-auto p-4"
-							src={VisionTech.src}
+							src={VisionTech}
+							width={824}
+							height={212}
 							alt="VisionTech"
 						/>
 					</div>
 					<div class="w-1/2 h-28">
-						<img
+						<Image
 							class="h-full m-auto p-4"
-							src={KSBergen.src}
+							src={KSBergen}
+							width={3027}
+							height={1019}
 							alt="Kulturstyret Bergen"
 						/>
 					</div>
