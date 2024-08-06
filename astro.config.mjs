@@ -11,7 +11,6 @@ export default defineConfig({
     applyBaseStyles: false
   }), db()],
   site: "https://phibkro.github.io",
-  base: "vektor",
   output: "hybrid",
   adapter: cloudflare()
 });
