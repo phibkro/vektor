@@ -12,5 +12,13 @@ export default defineConfig({
   }), db()],
   site: "https://phibkro.github.io",
   output: "hybrid",
-  adapter: cloudflare()
+  adapter: cloudflare(),
+  security: {
+    checkOrigin: true,
+  },
+  vite: {
+		optimizeDeps: {
+			exclude: ["astro:db"]
+		}
+	},
 });
