@@ -7,10 +7,12 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), tailwind({
-    applyBaseStyles: false
-  }), db()],
-  site: "https://phibkro.github.io",
+  integrations: [
+    react(), 
+    tailwind({ applyBaseStyles: false}), 
+    db(),
+  ],
+  site: "https://vektor.pages.dev/",
   output: "hybrid",
   adapter: cloudflare({
     imageService: "cloudflare",
