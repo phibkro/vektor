@@ -1,8 +1,8 @@
-import { Sponsors, db } from 'astro:db';
+import { Sponsor, db } from 'astro:db';
 
 // https://astro.build/db/seed
 export default async function seed() {
-	await db.insert(Sponsors).values([
+	await db.insert(Sponsor).values([
 		{ name: "Tekna", url: "https://www.tekna.no/" },
     {
       name: "Nasjonalt senter for realfagsrekruttering",

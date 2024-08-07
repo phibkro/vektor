@@ -18,7 +18,7 @@ const Session = defineTable({
 	}
 });
 
-const Sponsors = defineTable({
+const Sponsor = defineTable({
   columns: {
     name: column.text(),
     url: column.text(),
@@ -30,6 +30,6 @@ export default defineDb({
   tables: {
     User,
     Session,
-    Sponsors,
+    Sponsor,
   }
 });

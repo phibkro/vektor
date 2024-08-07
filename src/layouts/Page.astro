@@ -1,7 +1,7 @@
 ---
 import "@/globals.css";
 import { Image } from "astro:assets";
-import { db, Sponsors } from "astro:db";
+import { db, Sponsor } from "astro:db";
 import { ModeToggle } from "@/components/ModeToggle";
 import VektorLogo from "public/vektor-logo.svg";
 import VektorLogoWhite from "public/vektor-logo-white.svg";
@@ -23,7 +23,7 @@ const routes: Route[] = [
 	{ path: "/mineUtlegg", name: "Utlegg" },
 ];
 
-const sponsors = await db.select().from(Sponsors);
+const sponsors = await db.select().from(Sponsor);
 ---
 
 <script is:inline>
