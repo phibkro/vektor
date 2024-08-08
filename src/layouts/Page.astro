@@ -2,7 +2,11 @@
 import "@/globals.css";
 import { Image } from "astro:assets";
 import { db, Sponsor } from "astro:db";
-import { ModeToggle } from "@/components/ModeToggle";
+
+import { ModeToggle } from "@components/ModeToggle";
+import { UserMenu } from "@components/UserMenu";
+import { LoginDialog } from "@components/LoginDialog";
+
 import VektorLogo from "public/vektor-logo.svg";
 import VektorLogoWhite from "public/vektor-logo-white.svg";
 import Facebook from "public/facebook.svg";
@@ -25,6 +29,7 @@ const routes: Route[] = [
 ];
 
 const sponsors = await db.select().from(Sponsor);
+const user = Astro.locals.user;
 ---
 
 <script is:inline>
@@ -68,6 +73,11 @@ const sponsors = await db.select().from(Sponsor);
       ))}
     </nav>
     <ModeToggle client:load />
+    {user ?
+      <UserMenu client:load />
+      :
+      <LoginDialog client:load />
+    }
   </header>
 
   <slot class="flex-1"/>
